@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Dashboard - Al-Eeman Football Club</title>
+</head>
+<body>
+    <!-- Admin Login Screen -->
+    <div class="admin-login" id="adminLogin">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="login-logo">
+                    <img src="images/al eeman 2.jpeg" alt="Al-Eeman FC Logo">
+                    <h2>Al-Eeman FC Admin</h2>
+                </div>
+                <p>Content Management System</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter admin username">
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-key"></i> Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter admin password">
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+                </button>
+                <div class="login-footer">
+                    <!-- <p><i class="fas fa-info-circle"></i> Default: admin / admin123</p> -->
+                    <a href="index.html" class="back-home">
+                        <i class="fas fa-arrow-left"></i> Back to Homepage
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="container">
+                <div class="admin-header-content">
+                    <div class="admin-brand">
+                        <div class="admin-logo">
+                            <img src="images/al eeman 2.jpeg" alt="Logo">
+                        </div>
+                        <div class="admin-title">
+                            <h1>Al-Eeman FC Admin Panel</h1>
+                            <p>Welcome, Administrator</p>
+                        </div>
+                    </div>
+                    <div class="admin-actions">
+                        <a href="index.html" target="_blank" class="view-site-btn">
+                            <i class="fas fa-external-link-alt"></i> View Site
+                        </a>
+                        <button id="logoutBtn" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Navigation -->
+        <nav class="admin-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#dashboard" class="admin-nav-link active" data-section="dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a></li>
+                    <li><a href="#gallery" class="admin-nav-link" data-section="gallery">
+                        <i class="fas fa-images"></i> Gallery Management
+                    </a></li>
+                    <li><a href="#players" class="admin-nav-link" data-section="players">
+                        <i class="fas fa-users"></i> Players Management
+                    </a></li>
+                    <li><a href="#staff" class="admin-nav-link" data-section="staff">
+                        <i class="fas fa-chalkboard-teacher"></i> Staff Management
+                    </a></li>
+                    <li><a href="#registrations" class="admin-nav-link" data-section="registrations">
+                        <i class="fas fa-file-alt"></i> Registrations
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="container">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="admin-section active">
+                    <h2 class="admin-section-title">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard Overview
+                    </h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalImages">0</h3>
+                                <p>Gallery Images</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalPlayers">0</h3>
+                                <p>Total Players</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalStaff">0</h3>
+                                <p>Staff Members</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalRegistrations">0</h3>
+                                <p>Registrations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                        <div class="actions-grid">
+                            <a href="#gallery" class="action-card" data-section="gallery">
+                                <div class="action-icon">
+                                    <i class="fas fa-upload"></i>
+                                </div>
+                                <h4>Upload Images</h4>
+                                <p>Add new photos to gallery</p>
+                            </a>
+                            
+                            <a href="#players" class="action-card" data-section="players">
+                                <div class="action-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <h4>Add Player</h4>
+                                <p>Add new player to team</p>
+                            </a>
+                            
+                            <a href="#staff" class="action-card" data-section="staff">
+                                <div class="action-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h4>Manage Staff</h4>
+                                <p>Update coaching staff</p>
+                            </a>
+                            
+                            <a href="#registrations" class="action-card" data-section="registrations">
+                                <div class="action-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h4>View Registrations</h4>
+                                <p>Check player applications</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Management Section -->
+                <section id="gallery" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="admin-section-title">
+                            <i class="fas fa-images"></i> Gallery Management
+                        </h2>
+                        <button class="add-new-btn" id="showUploadForm">
+                            <i class="fas fa-plus"></i> Upload New Image
+                        </button>
+                    </div>
+                    
+                    <!-- Upload Form -->
+                    <div class="upload-form-container" id="uploadForm" style="display: none;">
+                        <div class="form-card">
+                            <h3><i class="fas fa-cloud-upload-alt"></i> Upload New Image</h3>
+                            <form id="adminUploadForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="imageTitle"><i class="fas fa-heading"></i> Image Title *</label>
+                                        <input type="text" id="imageTitle" name="imageTitle" required placeholder="Enter image title">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imageCategory"><i class="fas fa-tag"></i> Category *</label>
+                                        <select id="imageCategory" name="imageCategory" required>
+                                            <option value="">Select Category</option>
+                                            <option value="matches">Matches</option>
+                                            <option value="training">Training</option>
+                                            <option value="teams">Team Photos</option>
+                                            <option value="facilities">Facilities</option>
+                                            <option value="coaches">Coaches</option>
+                                            <option value="events">Events</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="imageDescription"><i class="fas fa-align-left"></i> Description</label>
+                                    <textarea id="imageDescription" name="imageDescription" rows="3" placeholder="Describe the image..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label><i class="fas fa-image"></i> Select Image *</label>
+                                    <div class="file-upload-area" id="fileUploadArea">
+                                        <div class="file-preview" id="filePreview">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <p>Click to upload or drag and drop</p>
+                                            <span>PNG, JPG, GIF up to 5MB</span>
+                                        </div>
+                                        <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-btn">
+                                        <i class="fas fa-upload"></i> Upload Image
+                                    </button>
+                                    <button type="button" class="cancel-btn" id="cancelUpload">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Management -->
+                    <div class="gallery-management">
+                        <div class="management-header">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="searchGallery" placeholder="Search images...">
+                            </div>
+                            <div class="gallery-filters">
+                                <select id="categoryFilter">
+                                    <option value="all">All Categories</option>
+                                    <option value="matches">Matches</option>
+                                    <option value="training">Training</option>
+                                    <option value="teams">Team Photos</option>
+                                    <option value="facilities">Facilities</option>
+                                    <option value="coaches">Coaches</option>
+                                    <option value="events">Events</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-grid" id="galleryGrid">
+                            <!-- Gallery images will be loaded here -->
+                        </div>
+                        
+                        <div class="no-results" id="noGalleryResults" style="display: none;">
+                            <i class="fas fa-images"></i>
+                            <h3>No Images Found</h3>
+                            <p>Upload your first image to get started</p>
+                            <button class="add-new-btn" id="showUploadForm2">
+                                <i class="fas fa-plus"></i> Upload Image
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Players Management Section -->
+                <section id="players" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="admin-section-title">
+                            <i class="fas fa-users"></i> Players Management
+                        </h2>
+                        <button class="add-new-btn" id="showPlayerForm">
+                            <i class="fas fa-plus"></i> Add New Player
+                        </button>
+                    </div>
+                    
+                    <!-- Player Form -->
+                    <div class="player-form-container" id="playerForm" style="display: none;">
+                        <div class="form-card">
+                            <h3><i class="fas fa-user-plus"></i> Add New Player</h3>
+                            <form id="addPlayerForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="playerName"><i class="fas fa-user"></i> Player Name *</label>
+                                        <input type="text" id="playerName" name="playerName" required placeholder="Full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="playerPosition"><i class="fas fa-futbol"></i> Position *</label>
+                                        <input type="text" id="playerPosition" name="playerPosition" required placeholder="e.g., Goalkeeper, Forward">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="playerTeam"><i class="fas fa-users"></i> Team *</label>
+                                        <select id="playerTeam" name="playerTeam" required>
+                                            <option value="">Select Team</option>
+                                            <option value="senior">Senior Team</option>
+                                            <option value="u16">Under-16 Team</option>
+                                            <option value="u13">Under-13 Team</option>
+                                            <option value="u10">Under-10 Team</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="playerImage"><i class="fas fa-image"></i> Image URL *</label>
+                                        <input type="text" id="playerImage" name="playerImage" required placeholder="Enter image URL or path">
+                                        <small>Example: images/player-name.jpg</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-btn">
+                                        <i class="fas fa-save"></i> Add Player
+                                    </button>
+                                    <button type="button" class="cancel-btn" id="cancelPlayerForm">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Players Grid -->
+                    <div class="players-management">
+                        <div class="team-tabs">
+                            <button class="team-tab active" data-team="all">All Players</button>
+                            <button class="team-tab" data-team="senior">Senior Team</button>
+                            <button class="team-tab" data-team="u16">Under-16</button>
+                            <button class="team-tab" data-team="u13">Under-13</button>
+                            <button class="team-tab" data-team="u10">Under-10</button>
+                        </div>
+                        
+                        <div class="players-grid" id="playersGrid">
+                            <!-- Players will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Staff Management Section -->
+                <section id="staff" class="admin-section">
+                    <div class="section-header">
+                        <h2 class="admin-section-title">
+                            <i class="fas fa-chalkboard-teacher"></i> Staff Management
+                        </h2>
+                        <button class="add-new-btn" id="showStaffForm">
+                            <i class="fas fa-plus"></i> Add Staff Member
+                        </button>
+                    </div>
+                    
+                    <!-- Staff Form -->
+                    <div class="staff-form-container" id="staffForm" style="display: none;">
+                        <div class="form-card">
+                            <h3><i class="fas fa-user-tie"></i> Add Staff Member</h3>
+                            <form id="addStaffForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="staffName"><i class="fas fa-user"></i> Name *</label>
+                                        <input type="text" id="staffName" name="staffName" required placeholder="Full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="staffRole"><i class="fas fa-briefcase"></i> Role *</label>
+                                        <input type="text" id="staffRole" name="staffRole" required placeholder="e.g., Head Coach, Board Member">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="staffType"><i class="fas fa-users"></i> Type *</label>
+                                        <select id="staffType" name="staffType" required>
+                                            <option value="">Select Type</option>
+                                            <option value="coach">Coaching Staff</option>
+                                            <option value="board">Board Member</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="staffImage"><i class="fas fa-image"></i> Image URL *</label>
+                                        <input type="text" id="staffImage" name="staffImage" required placeholder="Enter image URL or path">
+                                        <small>Example: images/coach-name.jpg</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-btn">
+                                        <i class="fas fa-save"></i> Add Staff Member
+                                    </button>
+                                    <button type="button" class="cancel-btn" id="cancelStaffForm">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Staff Grid -->
+                    <div class="staff-management">
+                        <div class="staff-tabs">
+                            <button class="staff-tab active" data-type="all">All Staff</button>
+                            <button class="staff-tab" data-type="coach">Coaching Staff</button>
+                            <button class="staff-tab" data-type="board">Board Members</button>
+                        </div>
+                        
+                        <div class="staff-grid" id="staffGrid">
+                            <!-- Staff members will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Registrations Section -->
+                <section id="registrations" class="admin-section">
+                    <h2 class="admin-section-title">
+                        <i class="fas fa-file-alt"></i> Player Registrations
+                    </h2>
+                    
+                    <div class="registrations-container">
+                        <div class="registrations-header">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="searchRegistrations" placeholder="Search registrations...">
+                            </div>
+                            <div class="filter-options">
+                                <select id="filterByCategory">
+                                    <option value="all">All Categories</option>
+                                    <option value="senior">Senior Team</option>
+                                    <option value="u16">Under-16</option>
+                                    <option value="u13">Under-13</option>
+                                    <option value="u10">Under-10</option>
+                                </select>
+                                <button class="export-btn" id="exportRegistrations">
+                                    <i class="fas fa-download"></i> Export CSV
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="registrations-table-container">
+                            <table class="registrations-table" id="registrationsTable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Age Category</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="registrationsTableBody">
+                                    <!-- Registrations will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="no-results" id="noRegistrations" style="display: none;">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>No Registrations Yet</h3>
+                            <p>Player registrations will appear here</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Admin Footer -->
+        <footer class="admin-footer">
+            <div class="container">
+                <p>&copy; 2023 Al-Eeman Football Club Admin Dashboard. All rights reserved.</p>
+                <p>Last Updated: <span id="lastUpdated"></span></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn" id="cancelAction">Cancel</button>
+                <button class="confirm-btn" id="confirmAction">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

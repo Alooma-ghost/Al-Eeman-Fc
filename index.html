@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/al eeman 2.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Al-Eeman Football Club - Iwo, Osun State, Nigeria</title>
+</head>
+<body>
+    <!-- Header Section -->    
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img"><img class="alman-image" src="images/al eeman 2.jpeg" alt="logo"></div>
+                <div class="logo-text">
+                    <h1>Al-Eeman Football Club</h1>
+                    <p>Iwo, Osun State, Nigeria</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#players">Senior Team</a></li>
+                    <li><a href="#age-categories">Youth Teams</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#coaches">Coaches</a></li>
+                    <li><a href="#board">Board</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="admin.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Al-Eeman Football Club</h2>
+            <p>Based in Iwo, Osun State, Nigeria. Building champions on and off the field with dedication, discipline, and faith.</p>
+            <a href="#register" class="cta-button">Join Our Team</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Club History</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Al-Eeman Football Club was founded in 2003 in Iwo, Osun State, Nigeria, with a mission to develop young football talents and promote sportsmanship in the community. The name "Al-Eeman" means "Faith" in Arabic, reflecting the club's core values of faith, discipline, and integrity.</p>
+                    <p>From humble beginnings as a local community team, Al-Eeman FC has grown to become one of the most respected football clubs in Osun State. Our youth academy has produced several players who have gone on to play in the Nigerian Professional Football League and beyond.</p>
+                    <p>In 2015, the club achieved a major milestone by winning the Osun State Football Championship, and in 2019, we were runners-up in the Southwest Regional Tournament. Our home ground is the Iwo Township Stadium, where we host matches and train our players.</p>
+                    <p>Beyond football, Al-Eeman FC is committed to community development, organizing charity events, and promoting education among young athletes. We believe in nurturing well-rounded individuals who excel both on and off the pitch.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/princess.jpeg" alt="Al-Eeman FC Team Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Players Section -->
+    <section id="players" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Senior Team Players</h2>
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper" id="senior-players">
+                    <!-- Senior team players will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Categories Section -->
+    <section id="age-categories">
+        <div class="container">
+            <h2 class="section-title">Youth Development Teams</h2>
+            
+            <!-- Under-16 Team -->
+            <div class="category-header">
+                <h3>Under-16 Team</h3>
+                <p>Players aged 15-16 years</p>
+            </div>
+            
+            <div class="category-coach">
+                <h4>Team Coach: Coach Taiwo Lukmon</h4>
+                <p>Specializes in tactical development for teenage players</p>
+            </div>
+            
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper" id="u16-players">
+                    <!-- U-16 players will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Under-13 Team -->
+            <div class="category-header">
+                <h3>Under-13 Team</h3>
+                <p>Players aged 12-13 years</p>
+            </div>
+            
+            <div class="category-coach">
+                <h4>Team Coach: Coach Taiwo Lukmon</h4>
+                <p>Focuses on fundamental skills and team building</p>
+            </div>
+            
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper" id="u13-players">
+                    <!-- U-13 players will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Under-10 Team -->
+            <div class="category-header">
+                <h3>Under-10 Team</h3>
+                <p>Players aged 9-10 years</p>
+            </div>
+            
+            <div class="category-coach">
+                <h4>Team Coach: Coach Taiwo Lukmon</h4>
+                <p>Specializes in introductory football and fun-based learning</p>
+            </div>
+            
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper" id="u10-players">
+                    <!-- U-10 players will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Club Gallery</h2>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="matches">Matches</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="teams">Team Photos</button>
+                <button class="filter-btn" data-filter="facilities">Facilities</button>
+                <button class="filter-btn" data-filter="coaches">Coaches</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+            
+            <!-- Gallery Images -->
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper" id="gallery-images">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches">
+        <div class="container">
+            <h2 class="section-title">Coaching Staff</h2>
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper" id="coaches-staff">
+                    <!-- Coaches will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Members Section -->
+    <section id="board" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Board Members & Founders</h2>
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper" id="board-members">
+                    <!-- Board members will be populated by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register">
+        <div class="container">
+            <h2 class="section-title">Player Registration</h2>
+            <div class="form-container">
+                <form id="registrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ageCategory">Age Category *</label>
+                            <select id="ageCategory" name="ageCategory" required>
+                                <option value="">Select Age Category</option>
+                                <option value="senior">Senior Team (17+)</option>
+                                <option value="u16">Under-16 (15-16 years)</option>
+                                <option value="u13">Under-13 (12-13 years)</option>
+                                <option value="u10">Under-10 (9-10 years)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Residential Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="experience">Football Experience (Years) *</label>
+                            <input type="number" id="experience" name="experience" min="0" max="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="previousClub">Previous Club (if any)</label>
+                            <input type="text" id="previousClub" name="previousClub">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Why do you want to join Al-Eeman FC? *</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Al-Eeman FC</h3>
+                    <p>Building champions through faith, discipline, and dedication in Iwo, Osun State, Nigeria.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Iwo Township Stadium, Iwo, Osun State</p>
+                    <p><i class="fas fa-phone"></i> +234 801 234 5678</p>
+                    <p><i class="fas fa-envelope"></i> info@aleemanfc.com</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">Club History</a>
+                    <a href="#players">Senior Team</a>
+                    <a href="#age-categories">Youth Teams</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#coaches">Coaches</a>
+                    <a href="#board">Board Members</a>
+                    <a href="#register">Registration</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Al-Eeman Football Club, Iwo, Osun State, Nigeria. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <span class="modal-date" id="modalDate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
